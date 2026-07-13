@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.75rem;
   padding: 1rem 1.1rem;
   border-bottom: 1px solid var(--line);
 }
@@ -28,6 +29,27 @@ body {
   width: 10px; height: 10px; border-radius: 999px;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   box-shadow: 0 0 12px rgba(124, 92, 255, 0.7);
+}
+.top-actions { display: flex; align-items: center; gap: 0.55rem; }
+.locale-toggle {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0a0f1c;
+}
+.locale-toggle button {
+  min-width: 2.4rem;
+  padding: 0.32rem 0.55rem;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.locale-toggle button + button { border-left: 1px solid var(--line); }
+.locale-toggle button[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--accent2) 20%, transparent);
+  color: var(--text);
 }
 .badge {
   font-size: 0.75rem;
